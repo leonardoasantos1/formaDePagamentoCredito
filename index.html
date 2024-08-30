@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulação de dados do cartão</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Simulação de dados do cartão</h1>
+        <p>Esta página foi criada com o objetivo de simular a inserção e visualização de dados de um cartão de crédito em tempo real. Ela é destinada exclusivamente para fins de estudos em JavaScript. Reforçamos que nenhuma informação real deve ser inserida, pois a página não possui medidas de segurança para proteger dados sensíveis.</p>
+            <section class="container-main">
+                <div class="container-inputs left">
+                    <div class="form-inputs">
+                        <div class="inputs">
+                            <label for="name">Nome no cartão:</label>
+                            <input id="name" type="text" minlength="1" maxlength="25">
+                        </div>
+                        <div class="inputs">
+                            <label for="number">Número no cartão:</label>
+                            <input id="number" type="number" maxlength="19"> 
+                        </div>
+                        <div class="two-inputs">
+                            <div class="inputs">
+                                <label for="data">Data de validade:</label>
+                                <input id="data" type="text" minlength="5" maxlength="5">
+                            </div>
+                            <div class="inputs">
+                                <label for="cvv">CVV:</label>
+                                <input id="cvv" type="password" minlength="3" maxlength="3">
+                            </div>
+                        </div>
+                        <button>Enviar</button>
+                        <p><strong>Atenção:</strong> Esta página é apenas para fins de estudo. Não insira informações reais de cartões de crédito.</p>
+                    </div>
+                </div>
+                <div class="container-card right">
+                    <div class="card">
+                        <div class="card-chip">
+                            <div id="src-chip"></div>
+                            <div id="src-aproximacao"></div>
+                        </div>
+                        <div class="card-number">
+                            <p id="text-number">0000 0000 0000 0000</p>
+                        </div>
+                        <div class="card-data">
+                            <p id="text-data">00/00</p>
+                        </div>
+                        <div class="card-name">
+                            <p id="text-name">Nome no cartao</p>
+                            <div id="src-bandeira"></div>
+                        </div>
+                    </div>
+                    <!--div card-back estará escondida até ser selecionada pelo input cvv-->
+                    <div class="card-back back">
+                        <div class="line-black"></div>
+                    </div>
+                    <div class="line-cvv">
+                        <p id="text-cvv">000</p>
+                    </div>
+                </div>
+            </section>
+    </main>    
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
