@@ -9,7 +9,10 @@
 <body>
     <main class="container">
         <h1>Simulação de dados do cartão</h1>
-        <p>Esta página foi criada com o objetivo de simular a inserção e visualização de dados de um cartão de crédito em tempo real. Ela é destinada exclusivamente para fins de estudos em JavaScript. Reforçamos que nenhuma informação real deve ser inserida, pois a página não possui medidas de segurança para proteger dados sensíveis.</p>
+        <div class="container-text">
+            <img src="assets/images/alerta.png" alt="">
+            <p>Esta página foi criada com o objetivo de simular a inserção e visualização de dados de um cartão de crédito em tempo real. Ela é destinada exclusivamente para fins de estudos. Reforçamos que nenhuma informação real deve ser inserida, pois a página não possui medidas de segurança para proteger dados sensíveis.</p>
+        </div>
             <section class="container-main">
                 <div class="container-inputs left">
                     <div class="form-inputs">
@@ -19,7 +22,7 @@
                         </div>
                         <div class="inputs">
                             <label for="number">Número no cartão:</label>
-                            <input id="number" type="number" maxlength="19"> 
+                            <input id="number" type="text" maxlength="19"> 
                         </div>
                         <div class="two-inputs">
                             <div class="inputs">
@@ -32,23 +35,22 @@
                             </div>
                         </div>
                         <button>Enviar</button>
-                        <p><strong>Atenção:</strong> Esta página é apenas para fins de estudo. Não insira informações reais de cartões de crédito.</p>
+                        <p class="alerta-secundario"><strong>Atenção:</strong> Esta página é apenas para fins de estudo. Não insira informações reais de cartões de crédito.</p>
                     </div>
                 </div>
                 <div class="container-card right">
                     <div class="card">
                         <div class="card-chip">
-                            <div id="src-chip"></div>
-                            <div id="src-aproximacao"></div>
+                            <img class="img-chip" src="assets/images/chip.png" alt="imagem-chip-no-cartão">
                         </div>
                         <div class="card-number">
-                            <p id="text-number">0000 0000 0000 0000</p>
+                            <p id="text-number"></p>
                         </div>
                         <div class="card-data">
-                            <p id="text-data">00/00</p>
+                            <p id="text-data"></p>
                         </div>
                         <div class="card-name">
-                            <p id="text-name">Nome no cartao</p>
+                            <p id="text-name"></p>
                             <div id="src-bandeira"></div>
                         </div>
                     </div>
@@ -57,7 +59,7 @@
                         <div class="line-black"></div>
                     </div>
                     <div class="line-cvv">
-                        <p id="text-cvv">000</p>
+                        <p id="text-cvv"></p>
                     </div>
                 </div>
             </section>
