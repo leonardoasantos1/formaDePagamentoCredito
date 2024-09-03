@@ -5,37 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulação de dados do cartão</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
     <main class="container">
         <h1>Simulação de dados do cartão</h1>
-        <div class="container-text">
-            <img src="assets/images/alerta.png" alt="">
-            <p>Esta página foi criada com o objetivo de simular a inserção e visualização de dados de um cartão de crédito em tempo real. Ela é destinada exclusivamente para fins de estudos. Reforçamos que nenhuma informação real deve ser inserida, pois a página não possui medidas de segurança para proteger dados sensíveis.</p>
-        </div>
             <section class="container-main">
                 <div class="container-inputs left">
                     <div class="form-inputs">
                         <div class="inputs">
                             <label for="name">Nome no cartão:</label>
-                            <input id="name" type="text" minlength="1" maxlength="25">
+                            <input id="name" type="text" minlength="1" maxlength="20">
                         </div>
                         <div class="inputs">
                             <label for="number">Número no cartão:</label>
                             <input id="number" type="text" maxlength="19"> 
                         </div>
                         <div class="two-inputs">
-                            <div class="inputs">
+                            <div class="inputs two">
                                 <label for="data">Data de validade:</label>
                                 <input id="data" type="text" minlength="5" maxlength="5">
                             </div>
-                            <div class="inputs">
+                            <div class="inputs two">
                                 <label for="cvv">CVV:</label>
                                 <input id="cvv" type="password" minlength="3" maxlength="3">
                             </div>
                         </div>
                         <button>Enviar</button>
-                        <p class="alerta-secundario"><strong>Atenção:</strong> Esta página é apenas para fins de estudo. Não insira informações reais de cartões de crédito.</p>
                     </div>
                 </div>
                 <div class="container-card right">
@@ -57,12 +53,16 @@
                     <!--div card-back estará escondida até ser selecionada pelo input cvv-->
                     <div class="card-back back">
                         <div class="line-black"></div>
-                    </div>
-                    <div class="line-cvv">
-                        <p id="text-cvv"></p>
+                        <div class="line-cvv">
+                            <p id="text-cvv"></p>
+                        </div>
                     </div>
                 </div>
             </section>
+            <div class="container-text">
+                <img src="assets/images/alerta.png" alt="">
+                <p>Esta página foi criada com o objetivo de simular a inserção e visualização de dados de um cartão de crédito em tempo real. Ela é destinada exclusivamente para fins de estudos. Reforçamos que nenhuma informação real deve ser inserida, pois a página não possui medidas de segurança para proteger dados sensíveis.</p>
+            </div>
     </main>    
     <script src="assets/js/app.js"></script>
 </body>

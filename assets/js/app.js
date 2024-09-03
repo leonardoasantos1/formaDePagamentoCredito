@@ -12,7 +12,24 @@ const textCvv = document.getElementById('text-cvv');
 
 names.addEventListener('input', () => {
     textName.textContent = names.value;
+    let namesLength = names.value.length;
+
+    if(namesLength > 0) {
+        names.style.border = '1px solid green';
+    } else {
+        names.style.border = '1px solid red';
+    }
 });
+
+names.addEventListener('focus', () => {
+    let namesLength = names.value.length;
+
+    if(namesLength === 1) {
+        names.style.border = '1px solid green';
+    } else {
+        names.style.border = '1px solid red';
+    }
+})
 
 numbers.addEventListener('input', () => {
     textNumber.textContent = numbers.value;
@@ -39,6 +56,16 @@ numbers.addEventListener('input', () => {
     }
 });
 
+numbers.addEventListener('focus', () => {
+    let numberLength = numbers.value.length;
+
+    if(numberLength === 19) {
+        numbers.style.border = '1px solid green'
+    } else {
+        numbers.style.border = '1px solid red'
+    }
+})
+
 datas.addEventListener('input', () => {
     textData.textContent = datas.value;
     let dataLength = datas.value.length;
@@ -54,19 +81,46 @@ datas.addEventListener('input', () => {
     }
 });
 
+datas.addEventListener('focus', () => {
+    let dataLength = datas.value.length;
+
+    if(dataLength === 5) {
+        datas.style.border = '1px solid green'
+    } else {
+        datas.style.border = '1px solid red'
+    }
+})
+
 cvv.addEventListener('input', () => {
-    textCvv.textContent = cvv.value;
+    textCvv.textContent =  cvv.value;
+
     let cvvLength = cvv.value.length;
 
     if(cvvLength === 3) {
         cvv.style.border = '1px solid green'
-    } else if (!NaN){
+    } else {
         cvv.style.border = '1px solid red'
     }
 });
 
+const cvvs = document.getElementById('cvv');
+const card = document.querySelector('.card');
+const cardBack = document.querySelector('.card-back');
 
+cvv.addEventListener('focus', () => {
+    let cvvLength = cvv.value.length;
 
+    if(cvvLength === 3) {
+        cvv.style.border = '1px solid green'
+    } else {
+        cvv.style.border = '1px solid red'
+    }
 
+    card.style.display = 'none';
+    cardBack.style.display = 'block';
+})
 
-
+cvvs.addEventListener('blur', () => {
+    cardBack.style.display = 'none';
+    card.style.display = 'block';
+});

@@ -15,11 +15,13 @@ body {
 }
 
 .container {
-    width: 80%;
-    height: 90%;
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: start;
+    max-width: 90%;
+    max-height: 90%;
 }
 
 .container > h1 {
@@ -28,9 +30,9 @@ body {
 
 .container-text {
     display: flex;
-    border: 1px solid rgba(77, 10, 10, 0.3);
-    background-color: rgba(153, 42, 42, 0.3);
-    color: #b91717;
+    border: 1px solid #770d0d;
+    background-color: rgba(204, 77, 77, 0.3);
+    color: #770d0d;
     padding: 5px;
     text-align: justify;
     align-items: center;
@@ -43,6 +45,7 @@ body {
     width: 30px;
     height: 30px;
     margin: 0 10px;
+    opacity: 0.7;
 }
 
 .container-main {
@@ -50,7 +53,7 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
-    border-radius: 10px;
+    flex-direction: column-reverse;
 }
 
 .left, .right {
@@ -80,19 +83,25 @@ body {
 .form-inputs {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin-left: 10px;
+    gap: 15px;
+    max-width: 90%;
 }
 
 .inputs {
     display: flex;
     flex-direction: column;
-    gap: 1px;
 }
 
 .two-inputs {
     display: flex;
-    gap: 10px;
+    gap: 5px;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.two {
+    width: 50%;
 }
 
 #number, #data, #cvv, #name {
@@ -124,11 +133,34 @@ body {
     position: relative;
 }
 
-.alerta-secundario {
-    border: 1px solid rgba(77, 10, 10, 0.3);
-    background-color: rgba(153, 42, 42, 0.3);
-    color: #b91717;
+.card-back {
+    display: none;
+}
+
+.back {
+    background: linear-gradient(90deg, #2a3b75, #000000);
+    color: #ddd;
+    height: 200px;
+    width: 310px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.line-black {
+    width: 100%;
+    background-color: #000;
+    height: 40px;
+    margin-top: 30px;
+}
+
+.line-cvv {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    color: #000;
+    margin: 10px;
+    opacity: 0.7;
+    text-align: end;
     padding: 5px;
-    margin: 10px 0;
-    font-size: 0.9rem;
+    max-width: 90%;
 }
