@@ -2,6 +2,8 @@
 
 Este projeto é uma aplicação simples que simula a inserção e visualização de dados de um cartão de crédito em tempo real. A ideia principal é permitir que o usuário visualize como os dados inseridos são refletidos em um cartão fictício na tela.
 
+![imagem](https://github.com/user-attachments/assets/ea3c9bb5-1210-43cc-8518-132f8542f55d) ![imagem2](https://github.com/user-attachments/assets/d3b24ef8-8b40-473c-bafc-1019b44f09e9)
+
 ## Funcionalidades
 
 - Visualização dos dados inseridos em tempo real no layout do cartão.
